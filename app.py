@@ -125,7 +125,7 @@ JSON Estructura:
 """
 
 if "chat_session" not in st.session_state:
-    model = genai.GenerativeModel('gemini-2.5-flash', system_instruction=instrucciones_bot)
+    model = genai.GenerativeModel('models/gemini-1.5-flash', system_instruction=instrucciones_bot)
     st.session_state.chat_session = model.start_chat(history=[])
     st.session_state.mensajes = []
     
